@@ -10,17 +10,45 @@ body {
   color: white;
   overflow: hidden;
   font-size: 30px;
+  cursor: default;
+}
+
+@font-face {
+  font-family: SF-Pro-Bold;
+  src: url(./assets/SFPro/sf-pro-text-heavy.ttf);
+}
+
+@font-face {
+  font-family: SF-Pro-Light;
+  font-weight: lighter;
+  src: url(./assets/SFPro/sf-pro-text-light.ttf);
 }
 
 .line1 {
-  font-weight: bold;
   margin-bottom: 25px;
+  font-family: SF-Pro-Light;
 }
 
 .line2 {
-  font-weight: lighter;
+  font-family: SF-Pro-Bold;
+  letter-spacing: 10px;
 }
 
 .link {
   font-style: italic !important;
+}
+
+.fade-in {
+  animation: FadeIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
 }
